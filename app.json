@@ -1,0 +1,54 @@
+{
+  "name": "Dareen-Userbot",
+  "description": "[Dareen-Userbot] adalah userbot Telegram modular yang berjalan di Python3 dengan Library Pyrogram.  Powered by Dareen-Userbot.",
+    "logo": "https://telegra.ph//file/d77179f5ad209254a0ce4.jpg",
+
+  "stack": "heroku-22",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Buatlah Bot Di BotFather Lalu Salin Token Bot Nya Disini Kontol",
+      "required": true
+    },
+    "STRING_SESSION1": {
+      "description": "Dapatkan String Session Pyrogram di Grup » https://t.me/Dareensupport » Lalu ketik #string",
+      "required": true
+    },
+    "OPENAI_API_KEY": {
+      "description": "Ambil Api Key nya Di Sini Kontol https://openai.com/api/",
+      "required": false,
+      "value": ""
+    },
+    "BOTLOG_CHAT_ID": {
+      "description": "Mau Buat Mau Ngga Terserah Bapaa lu Ngentot",
+      "required": false,
+      "value": "-100"
+    },
+    "HEROKU_API_KEY": {
+      "description": "Ambil Heroku API KEY mu disini Tod » https://dashboard.heroku.com/account",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Masukan Nama App heroku, Liat Paling Atas Jangan Buta Map Memek",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/interconnectit/heroku-buildpack-ffmpeg"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
